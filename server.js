@@ -16,5 +16,9 @@ mongoose
   })
   .catch((err) => console.log(err));
 
+app.get("/", (req, res) => {
+  res.send("Progress Tracker API");
+});
+
 app.use("/api/task", taskRoute);
 app.use("/api/auth", userRoute);
